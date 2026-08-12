@@ -18,7 +18,7 @@ import { MobileBottomNav } from "@/components/MobileBottomNav";
 
 export const metadata: Metadata = {
   title: {
-    default: "QAYDA? — ҰБТ-дан кейін қайда барасың?",
+    default: "QAYDA? — ҰБТ алдында қайда барасың?",
     template: "%s | QAYDA?",
   },
   description:

@@ -12,11 +12,11 @@ export const passingScores: PassingScore[] = [
   { year: 2025, universityId: "kaznu", groupCode: "B057", general: 90, rural: 90, sourceId: "univision" },
   { year: 2025, universityId: "sdu", groupCode: "B057", general: 120, sourceId: "univision" },
   { year: 2025, universityId: "kbtu", groupCode: "B058", general: 104, sourceId: "demo" },
-  { year: 2025, universityId: "satbayev", groupCode: "B073", general: 82, sourceId: "demo" },
   { year: 2025, universityId: "kbtu", groupCode: "B062", general: 79, rural: 60, sourceId: "demo" },
   { year: 2025, universityId: "enu", groupCode: "B010", general: 65, sourceId: "demo" },
-  { year: 2025, universityId: "kaznu", groupCode: "B086", general: 132, rural: 110, sourceId: "demo" },
-  { year: 2025, universityId: "kaznu", groupCode: "B037", general: 91, sourceId: "demo" },
+  { year: 2025, universityId: "kaznu", groupCode: "ВМ086", general: 124, rural: 116, sourceId: "demo" },
+  { year: 2025, universityId: "kaznu", groupCode: "ВМ088", general: 113, rural: 107, sourceId: "demo" },
+  { year: 2025, universityId: "kaznu", groupCode: "B085", general: 91, sourceId: "demo" },
 ];
 
 export function getPassingScoresForGroup(groupCode: string): PassingScore[] {

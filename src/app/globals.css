@@ -32,24 +32,31 @@ h1, h2, h3, h4, .font-display {
   font-weight: 800;
 }
 
-/* Brutalist card primitive */
-.brutal {
-  background: var(--qd-paper);
-  border: 3px solid var(--qd-ink);
-  box-shadow: 6px 6px 0 var(--qd-ink);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
+/* Brutalist card primitive.
+   Wrapped in @layer components so Tailwind utility classes (bg-lime,
+   bg-flame, text-paper, etc. — which live in the `utilities` layer) always
+   win the cascade over these defaults, regardless of source order. Without
+   this, .brutal's own background was silently overriding bg-flame/bg-ink
+   on buttons, causing invisible white-on-white text. */
+@layer components {
+  .brutal {
+    background: var(--qd-paper);
+    border: 3px solid var(--qd-ink);
+    box-shadow: 6px 6px 0 var(--qd-ink);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
 
-.brutal-hover:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 var(--qd-ink);
-}
+  .brutal-hover:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 var(--qd-ink);
+  }
 
-.brutal-ink {
-  background: var(--qd-ink);
-  color: var(--qd-paper);
-  border: 3px solid var(--qd-ink);
-  box-shadow: 6px 6px 0 var(--qd-flame);
+  .brutal-ink {
+    background: var(--qd-ink);
+    color: var(--qd-paper);
+    border: 3px solid var(--qd-ink);
+    box-shadow: 6px 6px 0 var(--qd-flame);
+  }
 }
 
 /* Visible keyboard focus everywhere */

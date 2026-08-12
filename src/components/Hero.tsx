@@ -35,7 +35,7 @@ export function Hero() {
           custom={1}
           variants={fadeUp}
         >
-          ҰБТ-дан кейін
+          ҰБТ алдында
           <br />
           <span className="text-flame">қайда барасың?</span>
         </motion.h1>

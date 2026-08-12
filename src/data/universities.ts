@@ -23,7 +23,7 @@ export const universities: University[] = [
     city: "Алматы",
     type: "Мемлекеттік",
     website: "https://satbayev.university",
-    programSlugs: ["information-technologies", "electric-power-engineering", "radio-electronics"],
+    programSlugs: ["information-technologies", "electric-power-engineering", "architecture", "chemical-engineering", "mining", "construction", "telecom-communications"],
   },
   {
     id: "enu",
@@ -32,7 +32,7 @@ export const universities: University[] = [
     city: "Астана",
     type: "Мемлекеттік",
     website: "https://enu.kz",
-    programSlugs: ["information-technologies", "physics-teacher", "general-medicine"],
+    programSlugs: ["information-technologies", "physics-teacher", "general-medicine", "law"],
   },
   {
     id: "kaznu",
@@ -41,7 +41,7 @@ export const universities: University[] = [
     city: "Алматы",
     type: "Мемлекеттік",
     website: "https://kaznu.kz",
-    programSlugs: ["general-medicine", "pharmacy", "physics-teacher"],
+    programSlugs: ["general-medicine", "pharmacy", "physics-teacher", "pediatrics", "information-technologies", "law"],
   },
   {
     id: "sdu",

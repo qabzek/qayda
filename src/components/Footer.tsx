@@ -9,7 +9,7 @@ export function Footer() {
             <p className="font-display text-2xl font-bold">
               QAYDA<span className="text-flame">?</span>
             </p>
-            <p className="mt-2 max-w-xs text-sm text-paper/70">ҰБТ-дан кейінгі навигатор.</p>
+            <p className="mt-2 max-w-xs text-sm text-paper/70">ҰБТ алдындағы навигатор.</p>
           </div>
 
           <FooterCol

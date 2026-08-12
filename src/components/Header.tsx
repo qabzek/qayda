@@ -18,8 +18,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b-[3px] border-ink bg-paper/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="font-display text-xl font-bold tracking-tight sm:text-2xl">
-          QAYDA<span className="text-flame">?</span>
+        <Link href="/" className="flex items-baseline gap-1.5">
+          <span className="font-display text-xl font-bold tracking-tight sm:text-2xl">
+            QAYDA<span className="text-flame">?</span>
+          </span>
+          <span className="text-[10px] font-medium uppercase tracking-wide text-ink/40 sm:text-xs">
+            by FizX
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">

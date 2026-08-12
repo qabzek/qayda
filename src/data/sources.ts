@@ -25,6 +25,14 @@ export const sources: Source[] = [
     date: "2025",
     type: "media",
   },
+  {
+    id: "taylor-raem",
+    title: "IT мамандарының жалақысы (2026)",
+    organization: "Taylor.kz / RAEM жалақы шолуы",
+    url: "https://taylor.kz/salaries",
+    date: "2026",
+    type: "media",
+  },
 ];
 
 export function getSource(id?: string): Source | undefined {

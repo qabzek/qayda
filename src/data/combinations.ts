@@ -11,6 +11,7 @@ export const combinations: SubjectCombination[] = [
   { id: "history-geography", subjectIds: ["world-history", "geography"], labelKz: ["Дүниежүзі тарихы", "География"] },
   { id: "history-law", subjectIds: ["world-history", "law-basics"], labelKz: ["Дүниежүзі тарихы", "Құқық негіздері"] },
   { id: "foreign-history", subjectIds: ["foreign-lang", "world-history"], labelKz: ["Шет тілі", "Дүниежүзі тарихы"] },
+  { id: "geography-foreign-lang", subjectIds: ["geography", "foreign-lang"], labelKz: ["География", "Шет тілі"] },
   { id: "kazakh-lang-lit", subjectIds: ["kazakh-lang", "kazakh-lit"], labelKz: ["Қазақ тілі", "Қазақ әдебиеті"] },
   { id: "creative-creative", subjectIds: ["creative-exam", "creative-exam"], labelKz: ["Шығармашылық емтихан", "Шығармашылық емтихан"] },
 ];
