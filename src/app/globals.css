@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  /* QAYDA brutalist palette */
+  --qd-ink: #111111;
+  --qd-paper: #f5f5f0;
+  --qd-lime: #d7ff00;
+  --qd-flame: #ff4d00;
+}
+
+@theme inline {
+  --color-ink: var(--qd-ink);
+  --color-paper: var(--qd-paper);
+  --color-lime: var(--qd-lime);
+  --color-flame: var(--qd-flame);
+  --font-display: "Unbounded", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--qd-paper);
+  color: var(--qd-ink);
+  font-family: "Manrope", system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Unbounded", system-ui, sans-serif;
+}
+
+/* Brutalist card primitive */
+.brutal {
+  background: var(--qd-paper);
+  border: 3px solid var(--qd-ink);
+  box-shadow: 6px 6px 0 var(--qd-ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.brutal-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--qd-ink);
+}
+
+.brutal-ink {
+  background: var(--qd-ink);
+  color: var(--qd-paper);
+  border: 3px solid var(--qd-ink);
+  box-shadow: 6px 6px 0 var(--qd-flame);
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--qd-flame);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* marquee */
+@keyframes qd-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.qd-marquee-track {
+  animation: qd-marquee 22s linear infinite;
+}
