@@ -247,11 +247,31 @@ export default async function SpecialtyPage({
       <section className="mt-10">
         <h2 className="font-display text-xl font-bold uppercase">Қай ЖОО-да оқуға болады?</h2>
         {universities.length > 0 ? (
-          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {universities.map((u) => (
-              <UniversityCard key={u.id} slug={u.slug} name={u.name} city={u.city} programCount={u.programSlugs.length} />
-            ))}
-          </div>
+          <>
+            <p className="mt-2 text-sm text-ink/60">
+              2026 жылғы шекті балл бойынша сұрыпталды — ең қолжетімдіден бастап.
+            </p>
+            <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {universities
+                .map((u) => ({
+                  u,
+                  score: thresholdScores.find((t) => t.universityId === u.id)?.score,
+                }))
+                .sort((a, b) => (a.score ?? 999) - (b.score ?? 999))
+                .map(({ u, score }) => (
+                  <UniversityCard
+                    key={u.id}
+                    slug={u.slug}
+                    name={u.name}
+                    city={u.city}
+                    thresholdScore={score}
+                  />
+                ))}
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <SourceBadge sourceId="official-mon" organization="ҚР Ғылым және жоғары білім министрлігі" />
+            </div>
+          </>
         ) : (
           <p className="brutal mt-4 p-5 text-ink/60">Дерек әзірге жоқ</p>
         )}
