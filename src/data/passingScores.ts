@@ -14,8 +14,8 @@ export const passingScores: PassingScore[] = [
   { year: 2025, universityId: "kbtu", groupCode: "B058", general: 104, sourceId: "demo" },
   { year: 2025, universityId: "kbtu", groupCode: "B062", general: 79, rural: 60, sourceId: "demo" },
   { year: 2025, universityId: "enu", groupCode: "B010", general: 65, sourceId: "demo" },
-  { year: 2025, universityId: "kaznu", groupCode: "ВМ086", general: 124, rural: 116, sourceId: "demo" },
-  { year: 2025, universityId: "kaznu", groupCode: "ВМ088", general: 113, rural: 107, sourceId: "demo" },
+  { year: 2025, universityId: "kaznu", groupCode: "BM086", general: 124, rural: 116, sourceId: "demo" },
+  { year: 2025, universityId: "kaznu", groupCode: "BM088", general: 113, rural: 107, sourceId: "demo" },
   { year: 2025, universityId: "kaznu", groupCode: "B085", general: 91, sourceId: "demo" },
 ];
 

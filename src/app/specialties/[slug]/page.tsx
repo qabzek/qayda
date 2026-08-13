@@ -10,7 +10,7 @@ import {
   getSalaries,
   getUniversitiesForSpecialty,
   getSource,
-  getMinimumScore,
+  getMinimumScoresForGroup,
 } from "@/lib/data";
 import { StatCard } from "@/components/StatCard";
 import { RatingBadge } from "@/components/RatingBadge";
@@ -53,7 +53,13 @@ export default async function SpecialtyPage({
     getUniversitiesForSpecialty(specialty.slug),
   ]);
 
-  const minScore = group ? await getMinimumScore(group.category) : undefined;
+  const thresholdScores = await getMinimumScoresForGroup(specialty.groupCode);
+  const minThreshold = thresholdScores.length
+    ? thresholdScores.reduce((min, t) => Math.min(min, t.score), thresholdScores[0].score)
+    : undefined;
+  const maxThreshold = thresholdScores.length
+    ? thresholdScores.reduce((max, t) => Math.max(max, t.score), thresholdScores[0].score)
+    : undefined;
   const bestScore = scores.reduce<typeof scores[number] | undefined>(
     (best, s) => (!best || (s.general ?? 0) > (best.general ?? 0) ? s : best),
     undefined
@@ -117,7 +123,15 @@ export default async function SpecialtyPage({
       <section className="mt-8">
         <h2 className="font-display text-xl font-bold uppercase">Балдар</h2>
         <div className="brutal mt-4 divide-y-[3px] divide-ink">
-          <ScoreRow label="Шекті балл" hint="Қатысу үшін қажетті минимум" value={fmt(minScore?.score)} />
+          <ScoreRow
+            label="Шекті балл (2026)"
+            hint={
+              minThreshold !== undefined && maxThreshold !== undefined && minThreshold !== maxThreshold
+                ? `ЖОО-ға байланысты ${minThreshold}–${maxThreshold} аралығында өзгереді`
+                : "Қатысу үшін қажетті минимум"
+            }
+            value={minThreshold !== undefined ? String(minThreshold) : undefined}
+          />
           <ScoreRow label="2025 өту балы" hint="Өткен жылғы нақты конкурс нәтижесі" value={fmt(bestScore?.general)} />
           <ScoreRow label="🎯 QAYDA мақсаты" hint="Аналитикалық ұсыныс" value={specialty.targetScore ? `${specialty.targetScore}+` : undefined} accent />
         </div>

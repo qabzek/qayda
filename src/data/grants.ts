@@ -12,7 +12,7 @@ export const grants: Grant[] = [
   { groupCode: "B058", year: 2026, grants: 612, sourceId: "demo" },
   { groupCode: "B062", year: 2026, grants: 1510, sourceId: "demo" },
   { groupCode: "B010", year: 2026, grants: 980, sourceId: "demo" },
-  { groupCode: "ВМ086", year: 2026, grants: 3120, sourceId: "demo" },
+  { groupCode: "BM086", year: 2026, grants: 3120, sourceId: "demo" },
   { groupCode: "B085", year: 2026, grants: 540, sourceId: "demo" },
 ];
 

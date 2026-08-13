@@ -17,7 +17,7 @@ import { getPassingScoresForGroup as _getPassingScoresForGroup } from "@/data/pa
 import { getSalaries as _getSalaries } from "@/data/salaries";
 import { getSource as _getSource } from "@/data/sources";
 import { getPerspectiveInputs as _getPerspectiveInputs } from "@/data/perspectiveInputs";
-import { getMinimumScore as _getMinimumScore } from "@/data/minimumScores";
+import { getMinimumScoresForGroup as _getMinimumScoresForGroup, getMinimumScore as _getMinimumScore } from "@/data/minimumScores";
 import { computePerspective } from "@/lib/perspective";
 
 export async function getSubjects() {
@@ -80,8 +80,12 @@ export async function getSalaries(specialtyId: string) {
   return _getSalaries(specialtyId);
 }
 
-export async function getMinimumScore(category: string, year?: number) {
-  return _getMinimumScore(category, year);
+export async function getMinimumScoresForGroup(groupCode: string) {
+  return _getMinimumScoresForGroup(groupCode);
+}
+
+export async function getMinimumScore(universityId: string, groupCode: string) {
+  return _getMinimumScore(universityId, groupCode);
 }
 
 export async function getSource(id?: string) {

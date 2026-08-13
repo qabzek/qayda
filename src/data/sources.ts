@@ -33,6 +33,14 @@ export const sources: Source[] = [
     date: "2026",
     type: "media",
   },
+  {
+    id: "official-mon",
+    title: "2026 жылғы шекті балдар",
+    organization: "ҚР Ғылым және жоғары білім министрлігі",
+    url: "#",
+    date: "2026",
+    type: "official",
+  },
 ];
 
 export function getSource(id?: string): Source | undefined {

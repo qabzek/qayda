@@ -22,7 +22,7 @@ export const groups: EducationGroup[] = [
   { code: "B010", name: "Физика мұғалімдерін даярлау", subjectCombinationId: "math-physics", category: "pedagogy" },
   { code: "B054", name: "Физика", subjectCombinationId: "math-physics", category: "science" },
   { code: "B059", name: "Коммуникациялар және коммуникациялық технологиялар", subjectCombinationId: "math-physics", category: "engineering" },
-  { code: "B062", name: "Электр техникасы және энергетика", subjectCombinationId: "math-physics", category: "engineering" },
+  { code: "B062", name: "Электр техникасы және электроэнергетика", subjectCombinationId: "math-physics", category: "engineering" },
   { code: "B071", name: "Тау-кен ісі және пайдалы қазбаларды өндіру", subjectCombinationId: "math-physics", category: "engineering" },
   { code: "B074", name: "Қала құрылысы, құрылыс жұмыстары және азаматтық құрылыс", subjectCombinationId: "math-physics", category: "engineering" },
 
@@ -37,10 +37,10 @@ export const groups: EducationGroup[] = [
   { code: "B013", name: "Биология мұғалімдерін даярлау", subjectCombinationId: "biology-chemistry", category: "pedagogy" },
   { code: "B053", name: "Химия", subjectCombinationId: "biology-chemistry", category: "science" },
   { code: "B083", name: "Ветеринария", subjectCombinationId: "biology-chemistry", category: "medicine" },
-  { code: "B084", name: "Мейірбике ісі", subjectCombinationId: "biology-chemistry", category: "medicine" },
+  { code: "B084", name: "Мейіргер ісі", subjectCombinationId: "biology-chemistry", category: "medicine" },
   { code: "B085", name: "Фармация", subjectCombinationId: "biology-chemistry", category: "medicine" },
-  { code: "ВМ086", name: "Медицина", subjectCombinationId: "biology-chemistry", category: "medicine" },
-  { code: "ВМ088", name: "Педиатрия", subjectCombinationId: "biology-chemistry", category: "medicine" },
+  { code: "BM086", name: "Медицина", subjectCombinationId: "biology-chemistry", category: "medicine" },
+  { code: "BM088", name: "Педиатрия", subjectCombinationId: "biology-chemistry", category: "medicine" },
 
   // ── Биология + География ──────────────────────────────────────────────
   { code: "B001", name: "Педагогика және психология", subjectCombinationId: "biology-geography", category: "pedagogy" },
@@ -58,7 +58,8 @@ export const groups: EducationGroup[] = [
 
   // ── Дүниежүзі тарихы + Құқық негіздері ────────────────────────────────
   { code: "B049", name: "Құқық", subjectCombinationId: "history-law", category: "law" },
-  { code: "B096", name: "Құқық қорғау қызметі", subjectCombinationId: "history-law", category: "law" },
+  // Note: no second verified code found for this combo in this research
+  // pass — see specialties.ts.
 
   // ── Шет тілі + Дүниежүзі тарихы ──────────────────────────────────────
   { code: "B018", name: "Шет тілі мұғалімдерін даярлау", subjectCombinationId: "foreign-history", category: "pedagogy" },
@@ -67,15 +68,17 @@ export const groups: EducationGroup[] = [
 
   // ── География + Шет тілі ──────────────────────────────────────────────
   { code: "B091", name: "Туризм", subjectCombinationId: "geography-foreign-lang", category: "business" },
-  { code: "B093", name: "Мейрамхана ісі және қонақ үй бизнесі", subjectCombinationId: "geography-foreign-lang", category: "business" },
-  { code: "B141", name: "Халықаралық экономикалық қатынастар", subjectCombinationId: "geography-foreign-lang", category: "business" },
+  { code: "B093", name: "Мейрамхана ісі және мейманхана бизнесі", subjectCombinationId: "geography-foreign-lang", category: "business" },
+  // Note: "Халықаралық экономикалық қатынастар" (previously listed here as
+  // B141) was NOT found in the official 158-code threshold-score list this
+  // research pass — removed rather than left unverified. See specialties.ts.
 
   // ── Қазақ тілі + Қазақ әдебиеті ──────────────────────────────────────
   { code: "B016", name: "Қазақ тілі және әдебиеті мұғалімдерін даярлау", subjectCombinationId: "kazakh-lang-lit", category: "pedagogy" },
-  { code: "B037", name: "Филология", subjectCombinationId: "kazakh-lang-lit", category: "humanities" },
+  { code: "B037", name: "Филология (қазақ филологиясы)", subjectCombinationId: "kazakh-lang-lit", category: "humanities" },
 
   // ── Шығармашылық емтихан + Шығармашылық емтихан ──────────────────────
-  { code: "B073", name: "Сәулет өнері", subjectCombinationId: "creative-creative", category: "engineering" },
+  { code: "B073", name: "Сәулет", subjectCombinationId: "creative-creative", category: "engineering" },
   { code: "B030", name: "Бейнелеу өнері", subjectCombinationId: "creative-creative", category: "humanities" },
   { code: "B098", name: "Спорт", subjectCombinationId: "creative-creative", category: "humanities" },
 ];

@@ -81,7 +81,8 @@ export interface PassingScore {
 }
 
 export interface MinimumScore {
-  category: PerspectiveCategory | "general";
+  universityId: string;
+  groupCode: string;
   score: number;
   year: number;
   sourceId?: string;
